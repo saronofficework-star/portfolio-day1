@@ -67,7 +67,7 @@
   <h3>Contact Me</h3>
   <form>
     <label>Name:</label><br>
-    <input type="text" placeholder="Enter your name"><br><br>
+    <input type="text" id="username" placeholder="Enter your name"><br><br>
 
     <label>Email:</label><br>
     <input type="email" placeholder="Enter your email"><br><br>
@@ -75,18 +75,28 @@
     <button type="button" onclick="submitForm()">Submit</button>
   </form>
 
-  <img src="myphoto.jpeg" alt="my image" width="150">
+  <img src="myphoto.jpeg" alt="my image" width="150"><br><br>
+  <p id="output"></p>
 
   <script>
     function showMessage(){
       alert("You Clicked the button")
 
     }
+
     function changeText() {
-    document.getElementById("demo").innerText = "Now i am not a biginner anymore";
+      document.getElementById("demo").innerText = "Now i am not a biginner anymore";
     }
+
     function submitForm() {
-    alert("Form submitted successfully!");
+      let name = document.getElementById("username").value;
+      if (name === "") {
+        alert("Please enter your name");
+      } 
+      else {
+        document.getElementById("output").innerText = "Hello " + name + " 👋";
+        alert("Hello " + name + " 👋");
+      }
     }
 
   </script>
