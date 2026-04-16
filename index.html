@@ -49,7 +49,8 @@
 
   <h2>About Me</h2>
   <hr>
-  <p>I am a beginner learning Full Stack Development and building projects.</p>
+  <p id="demo">I am a beginner learning Full Stack Development and building projects.</p>
+  <button onclick="changeText()">Change Text</button><br>
 
   <a href="https://github.com/saronofficework-star">My GitHub</a><br>
   <a href="https://www.linkedin.com/in/sarondip-biswas-a3273a284">My LinkedIn</a><br>
@@ -71,10 +72,24 @@
     <label>Email:</label><br>
     <input type="email" placeholder="Enter your email"><br><br>
 
-    <button type="submit">Submit</button>
+    <button type="button" onclick="submitForm()">Submit</button>
   </form>
 
   <img src="myphoto.jpeg" alt="my image" width="150">
+
+  <script>
+    function showMessage(){
+      alert("You Clicked the button")
+
+    }
+    function changeText() {
+    document.getElementById("demo").innerText = "Now i am not a biginner anymore";
+    }
+    function submitForm() {
+    alert("Form submitted successfully!");
+    }
+
+  </script>
 
 </body>
 </html>
